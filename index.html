@@ -283,7 +283,8 @@ overflow-x:auto;
 table{
 width:100%;
 border-collapse:collapse;
-min-width:700px;
+min-width:0;
+table-layout:fixed;
 }
 
 th{
@@ -325,6 +326,58 @@ color:#ffffff;
 display:none;
 }
 
+.mobile-schedule,
+.mobile-price{
+display:none;
+}
+
+.schedule-card,
+.price-card{
+background:#111;
+border:1px solid #2a2a2a;
+border-radius:16px;
+padding:18px;
+margin-bottom:12px;
+}
+
+.schedule-card h4,
+.price-card h4{
+color:#c1121f;
+margin-bottom:10px;
+font-size:1rem;
+}
+
+.schedule-card p,
+.price-card p{
+margin:6px 0;
+}
+
+.mobile-schedule,
+.mobile-price{
+display:none;
+}
+
+.schedule-card,
+.price-card{
+background:#111;
+border:1px solid #2a2a2a;
+border-radius:16px;
+padding:18px;
+margin-bottom:12px;
+}
+
+.schedule-card h4,
+.price-card h4{
+color:#c1121f;
+margin-bottom:10px;
+font-size:1rem;
+}
+
+.schedule-card p,
+.price-card p{
+margin:6px 0;
+}
+  
 @media(max-width:900px){
 
 section{
@@ -369,6 +422,15 @@ body{
 padding-bottom:85px;
 }
 
+.mobile-schedule,
+.mobile-price{
+display:block;
+}
+
+.desktop-table{
+display:none;
+}
+  
 }
 
 </style>
@@ -811,8 +873,10 @@ SCHEDULE
 </h2>
 
 <p class="section-sub">
-☞横へスライドしてご覧いただけます。
+曜日・時間・会場
 </p>
+
+<div class="desktop-table">
 
 <div class="table-wrap">
 
@@ -838,7 +902,7 @@ SCHEDULE
 
 <tr>
 <td>月</td>
-<td>5〜6年</td>
+<td>5.6年</td>
 <td>18:30-19:40</td>
 <td>善部小学校体育館</td>
 </tr>
@@ -859,7 +923,7 @@ SCHEDULE
 
 <tr>
 <td>木</td>
-<td>5〜6年</td>
+<td>5.6年</td>
 <td>16:30-18:00</td>
 <td>柏町グランド</td>
 </tr>
@@ -867,11 +931,9 @@ SCHEDULE
 <tr>
 <td>金</td>
 <td>1〜4年</td>
-<td>18:30-19:40</td>
+<td>16:30-18:00</td>
 <td>南希望ヶ丘中学校格技場</td>
 </tr>
-
-</tbody>
 
 </table>
 
@@ -879,20 +941,93 @@ SCHEDULE
 
 </div>
 
+</div>
+
+<div class="mobile-schedule">
+
+<div class="schedule-card">
+
+<h4>月曜日</h4>
+
+<p>対象：1〜4年</p>
+
+<p>時間：16:30-17:40</p>
+
+<p>会場：柏町グランド</p>
+
+</div>
+
+<div class="schedule-card">
+
+<h4>月曜日</h4>
+
+<p>対象：5〜6年</p>
+
+<p>時間：18:30-19:40</p>
+
+<p>会場：善部小学校体育館</p>
+
+</div>
+
+<div class="schedule-card">
+
+<h4>火曜日</h4>
+
+<p>対象：3〜6年</p>
+
+<p>時間：18:30-19:40</p>
+
+<p>会場：南希望ヶ丘中学校格技場</p>
+
+</div>
+
+<div class="schedule-card">
+
+<h4>水曜日</h4>
+
+<p>対象：1〜6年</p>
+
+<p>時間：18:40-19:50</p>
+
+<p>会場：南希望ヶ丘中学校格技場</p>
+
+</div>
+
+<div class="schedule-card">
+
+<h4>木曜日</h4>
+
+<p>対象：5〜6年</p>
+
+<p>時間：16:30-18:00</p>
+
+<p>会場：柏町グランド</p>
+
+</div>
+
+<div class="schedule-card">
+
+<h4>金曜日</h4>
+
+<p>対象：1〜4年</p>
+
+<p>時間：18:30-19:40</p>
+
+<p>会場：南希望ヶ丘中学校格技場</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section>
-
-<div class="container">
-
-<span class="eyebrow">
 PRICE
 </span>
 
 <h2 class="section-title">
 料金
 </h2>
-
+  
 <p class="section-sub">
 ご希望の通い方に合わせてコースをお選びいただけます。
 </p>
