@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FICSサッカースクール｜自由自在にボールをあやつろう</title>
+
+<meta name="description" content="ボールを持つことが、もっと楽しくなる。技術を武器として扱う感覚を育て、“思い通りにあやつれる”選手へ。FICSサッカースクール無料体験受付中。">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="FICSサッカースクール">
+<meta property="og:description" content="自由自在にボールをあやつろう">
+<meta property="og:image" content="https://yatsuhashi-sc.com/_p/acre/7432/images/pc/b371b331.jpg">
+<meta property="og:site_name" content="FICSサッカースクール">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#050505;
+--card:#111111;
+--red:#c1121f;
+--white:#ffffff;
+--gray:#ffffff;
+--line:#2a2a2a;
+--max-width:1200px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Noto Sans JP',sans-serif;
+background:var(--bg);
+color:var(--white);
+overflow-x:hidden;
+position:relative;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:-300px;
+left:50%;
+transform:translateX(-50%);
+width:1200px;
+height:1200px;
+background:
+radial-gradient(
+circle,
+rgba(193,18,31,.18),
+transparent 70%
+);
+pointer-events:none;
+z-index:-2;
+}
+
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background-image:
+linear-gradient(
+rgba(255,255,255,.02) 1px,
+transparent 1px
+),
+linear-gradient(
+90deg,
+rgba(255,255,255,.02) 1px,
+transparent 1px
+);
+background-size:40px 40px;
+pointer-events:none;
+z-index:-1;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(92%,1200px);
+margin:auto;
+}
+
+section{
+padding:120px 0;
+position:relative;
+}
+
+.section-dark{
+background:#0a0a0a;
+}
+
+.section-title{
+font-size:clamp(2rem,4vw,3.5rem);
+font-weight:900;
+line-height:1.2;
+text-align:center;
+margin-bottom:24px;
+}
+
+.section-sub{
+max-width:800px;
+margin:0 auto 70px;
+text-align:center;
+color:#ffffff;
+line-height:1.9;
+}
+
+.eyebrow{
+display:block;
+text-align:center;
+margin-bottom:12px;
+font-size:.9rem;
+font-weight:700;
+letter-spacing:3px;
+color:var(--red);
+}
+
+.card{
+background:rgba(17,17,17,.85);
+border:1px solid var(--line);
+border-radius:24px;
+padding:36px;
+transition:.35s;
+backdrop-filter:blur(10px);
+}
+
+.card:hover{
+border-color:var(--red);
+transform:translateY(-5px);
+box-shadow:0 0 40px rgba(193,18,31,.2);
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.grid-3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 38px;
+border-radius:999px;
+font-weight:700;
+border:2px solid var(--red);
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--red);
+transform:translateY(-2px);
+}
+
+.btn-primary{
+background:var(--red);
+}
+
+.btn-primary:hover{
+background:#d21f2d;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+border-radius:999px;
+border:1px solid rgba(193,18,31,.4);
+background:rgba(193,18,31,.08);
+margin-bottom:24px;
+font-size:.9rem;
+}
+
+.fade{
+opacity:1;
+transform:none;
+}
+
+.fade.show{
+opacity:1;
+transform:none;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero-bg{
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,.45),
+rgba(0,0,0,.85)
+),
+url('https://yatsuhashi-sc.com/_p/acre/7432/images/pc/b371b331.jpg');
+background-size:cover;
+background-position:center;
+}
+
+.hero-bg::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(
+circle at center,
+rgba(193,18,31,.25),
+transparent 70%
+);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+}
+
+.hero-tag{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:30px;
+font-size:.8rem;
+letter-spacing:3px;
+color:#ffffff;
+}
+
+.hero h1{
+font-size:clamp(3rem,7vw,5.5rem);
+line-height:1.05;
+font-weight:900;
+margin-bottom:30px;
+}
+
+.hero p{
+font-size:1.2rem;
+line-height:2;
+color:#ffffff;
+font-weight:500;
+max-width:700px;
+margin-bottom:40px;
+}
+
+.table-wrap{
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+min-width:700px;
+}
+
+th{
+background:var(--red);
+padding:16px;
+text-align:left;
+}
+
+td{
+padding:16px;
+background:#111;
+border-bottom:1px solid #222;
+}
+
+.faq-item{
+border-bottom:1px solid #222;
+}
+
+.faq-question{
+width:100%;
+background:none;
+border:none;
+color:#fff;
+font-size:1.1rem;
+font-weight:700;
+text-align:left;
+padding:25px 0;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+padding-bottom:25px;
+line-height:1.9;
+color:#ffffff;
+}
+
+.fixed-cta{
+display:none;
+}
+
+@media(max-width:900px){
+
+section{
+padding:90px 0;
+}
+
+.grid-2,
+.grid-3{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.fixed-cta{
+display:block;
+position:fixed;
+left:0;
+right:0;
+bottom:0;
+padding:12px;
+background:rgba(0,0,0,.92);
+backdrop-filter:blur(12px);
+z-index:9999;
+}
+
+.fixed-cta a{
+display:block;
+background:var(--red);
+padding:16px;
+text-align:center;
+font-weight:700;
+border-radius:999px;
+}
+
+body{
+padding-bottom:85px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-bg"></div>
+
+<div class="container">
+
+<div class="hero-content fade">
+
+<div class="badge">
+無料体験受付中
+</div>
+
+<div class="hero-tag">
+<span>DRIBBLE</span>
+<span>TECHNIQUE</span>
+<span>CREATIVITY</span>
+</div>
+
+<h1>
+自由自在に<br>
+ボールをあやつろう
+</h1>
+
+<p>
+ボールを持つことが、もっと楽しくなる。<br><br>
+技術を武器として扱う感覚を育て、
+“思い通りにあやつれる”選手へ。
+</p>
+
+<a href="https://yatsuhashi-sc.com/16975238155500" class="btn btn-primary">
+無料体験申込
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<span class="eyebrow">RECOMMEND</span>
+
+<h2 class="section-title">
+こんな選手におすすめ
+</h2>
+
+<div class="grid-2">
+
+<div class="card fade">
+<h3>ボールを自由自在にあやつれるようになりたい</h3>
+</div>
+
+<div class="card fade">
+<h3>ドリブルや駆け引きを武器にしたい</h3>
+</div>
+
+<div class="card fade">
+<h3>失敗を恐れずチャレンジできるようになりたい</h3>
+</div>
+
+<div class="card fade">
+<h3>サッカーをもっと好きになりたい</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section-dark">
+
+<div class="container">
+
+<span class="eyebrow">BENEFITS</span>
+
+<h2 class="section-title">
+FICSサッカースクールで<br>
+何を得られるか？
+</h2>
+
+<div class="grid-3">
+
+<div class="card fade">
+<h3 style="margin-bottom:15px;">
+ボールを持つことが心から楽しくなる
+</h3>
+<p>
+ボールを持つことを「失敗の原因」ではなく、
+「武器」として扱う感覚を育てます。
+</p>
+</div>
+
+<div class="card fade">
+<h3 style="margin-bottom:15px;">
+チャレンジすることが当たり前になる
+</h3>
+<p>
+失敗を恐れず挑戦する。
+その姿勢が成長を加速させます。
+</p>
+</div>
+
+<div class="card fade">
+<h3 style="margin-bottom:15px;">
+ボールを思い通りにあやつれるようになる
+</h3>
+<p>
+技術を磨き、
+自分の感覚でボールをあやつれる選手を目指します。
+</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:60px;">
+
+<a href="https://yatsuhashi-sc.com/16975238155500" class="btn btn-primary">
+無料体験申込
+</a>
+
+</div>
+
+</div>
+
+</section>
+<section>
+
+<div class="container">
+
+<span class="eyebrow">WHY FICS</span>
+
+<h2 class="section-title">
+なぜFICSサッカースクールなのか？
+</h2>
+
+<div class="grid-3">
+
+<div class="card fade">
+
+<h3 style="margin-bottom:15px;">
+ボールを持つことを否定しない
+</h3>
+
+<p>
+多くの環境では、
+失わないことや安全なプレーが優先されます。<br><br>
+
+FICSサッカースクールでは、
+まずボールを持つことを楽しむことを大切にしています。
+</p>
+
+</div>
+
+<div class="card fade">
+
+<h3 style="margin-bottom:15px;">
+失敗は成長の材料
+</h3>
+
+<p>
+ミスを責めません。<br><br>
+
+チャレンジを評価します。<br><br>
+
+だからこそ選手は思い切って挑戦できます。
+</p>
+
+</div>
+
+<div class="card fade">
+
+<h3 style="margin-bottom:15px;">
+技術を武器にする
+</h3>
+
+<p>
+練習のための技術ではなく、
+試合で使える技術へ。<br><br>
+
+相手との駆け引きで勝負できる選手を育てます。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section-dark">
+
+<div class="container">
+
+<span class="eyebrow">COACH</span>
+
+<h2 class="section-title">
+指導スタッフ
+</h2>
+
+<div class="grid-2" style="align-items:center;">
+
+<div class="fade">
+
+<img
+src="https://yatsuhashi-sc.com/_p/acre/7432/images/pc/e7e950d8.jpg"
+alt="藤巻志歩"
+style="
+border-radius:24px;
+border:1px solid #333;
+">
+
+</div>
+
+<div class="fade">
+
+<h3 style="
+font-size:2rem;
+font-weight:900;
+margin-bottom:8px;
+">
+藤巻 志歩
+</h3>
+
+<p style="
+color:#ffffff;
+margin-bottom:30px;
+">
+Fujimaki Shiho
+</p>
+
+<p style="
+line-height:2;
+margin-bottom:30px;
+">
+技術は磨くもの。<br><br>
+
+「できない」を「できる」に変える。<br><br>
+
+ボールを自由自在にあやつる楽しさと、
+挑戦する姿勢を育てます。
+</p>
+
+<div class="card" style="margin-bottom:25px;">
+
+<p>一般社団法人FICSアカデミー 専務理事</p>
+
+<p style="margin-top:10px;">
+JFA公認C級コーチライセンス
+</p>
+
+<p style="margin-top:10px;">
+指導歴17年
+</p>
+
+</div>
+
+<a
+href="https://www.instagram.com/fujimaki_shiho_coach?igsh=MW05YnNyNnZnaDRpZw%3D%3D&utm_source=qr"
+target="_blank"
+class="btn"
+>
+Instagram
+</a>
+
+</div>
+
+</div>
+
+<div
+class="card fade"
+style="
+margin-top:60px;
+padding:50px;
+text-align:center;
+"
+>
+
+<span class="eyebrow">
+MESSAGE
+</span>
+
+<p style="
+font-size:1.2rem;
+line-height:2;
+max-width:800px;
+margin:auto;
+">
+
+技術は磨くもの。<br><br>
+
+「できない」を「できる」に変える。<br><br>
+
+ボールを自由自在にあやつる楽しさと、
+挑戦する姿勢を育てます。
+
+</p>
+
+</div>
+
+<div style="
+text-align:center;
+margin-top:50px;
+">
+
+<a
+href="https://yatsuhashi-sc.com/16975238155500"
+class="btn btn-primary"
+>
+無料体験申込
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<span class="eyebrow">
+FAQ
+</span>
+
+<h2 class="section-title">
+よくある質問
+</h2>
+
+<div class="faq-list">
+
+<div class="faq-item">
+
+<button class="faq-question">
+はじめてでも参加できますか？
+</button>
+
+<div class="faq-answer">
+もちろん参加できます。<br><br>
+
+サッカー経験の有無に関わらずご参加いただけます。<br><br>
+
+現在所属チームがない選手や、サッカーを始めたばかりの選手も参加しています。<br><br>
+
+技術レベルよりも、「上手くなりたい」という気持ちを大切にしています。
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+FC FICSに所属していなくても参加できますか？
+</button>
+
+<div class="faq-answer">
+参加できます。<br><br>
+
+FC FICS以外のチームに所属している選手も多数在籍しております。<br><br>
+
+現在の所属チームで活動を続けながら、技術向上のために通っている選手もいます。
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+どのような選手が参加していますか？
+</button>
+
+<div class="faq-answer">
+ボールをもっと上手に扱えるようになりたい選手や、ドリブル・駆け引きを武器にしたい選手が多く参加しています。<br><br>
+
+「もっとボールを持てるようになりたい」「もっと上手くなりたい」という想いを持った選手が集まっています。
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+体験参加はできますか？
+</button>
+
+<div class="faq-answer">
+可能です。<br><br>
+
+まずは体験参加していただき、実際の雰囲気や指導内容をご確認ください。<br><br>
+
+体験申込は専用フォームより受け付けております。
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+雨天の場合はどうなりますか？
+</button>
+
+<div class="faq-answer">
+会場や活動内容によって対応が異なります。<br><br>
+
+中止や変更がある場合は、事前にご案内いたします。
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+保護者の見学はできますか？
+</button>
+
+<div class="faq-answer">
+可能です。<br><br>
+
+お子さまの様子を見学していただけます。<br><br>
+
+実際のトレーニングの雰囲気や選手たちの様子もご覧ください。
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="section-dark">
+
+<div class="container">
+
+<span class="eyebrow">
+SCHEDULE
+</span>
+
+<h2 class="section-title">
+スケジュール
+</h2>
+
+<p class="section-sub">
+学年や生活スタイルに合わせて通えるよう、
+複数の曜日・会場で開催しています。
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>曜日</th>
+<th>対象学年</th>
+<th>時間</th>
+<th>会場</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>月</td>
+<td>1〜4年</td>
+<td>16:30-17:40</td>
+<td>柏町グランド</td>
+</tr>
+
+<tr>
+<td>月</td>
+<td>5〜6年</td>
+<td>18:30-19:40</td>
+<td>善部小学校体育館</td>
+</tr>
+
+<tr>
+<td>火</td>
+<td>3〜6年</td>
+<td>18:30-19:40</td>
+<td>南希望ヶ丘中学校格技場</td>
+</tr>
+
+<tr>
+<td>水</td>
+<td>1〜6年</td>
+<td>18:40-19:50</td>
+<td>南希望ヶ丘中学校格技場</td>
+</tr>
+
+<tr>
+<td>木</td>
+<td>5〜6年</td>
+<td>16:30-18:00</td>
+<td>柏町グランド</td>
+</tr>
+
+<tr>
+<td>金</td>
+<td>1〜4年</td>
+<td>18:30-19:40</td>
+<td>南希望ヶ丘中学校格技場</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<span class="eyebrow">
+PRICE
+</span>
+
+<h2 class="section-title">
+料金
+</h2>
+
+<p class="section-sub">
+ご希望の通い方に合わせてコースをお選びいただけます。
+</p>
+
+<h3 style="margin-bottom:25px;">
+入会初期費用
+</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tbody>
+
+<tr>
+<th>入会金</th>
+<td>3,300円</td>
+</tr>
+
+<tr>
+<th>年会費</th>
+<td>11,000円／年度毎</td>
+</tr>
+
+<tr>
+<th>保険料</th>
+<td>800円</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<p style="
+margin-top:20px;
+color:#ffffff;
+line-height:1.8;
+">
+※FC FICS選手コース・アカデミーコース在籍者は、
+入会金・年会費・保険料無料
+</p>
+
+<div style="height:60px;"></div>
+
+<h3 style="margin-bottom:25px;">
+月会費
+</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+<th>コース</th>
+<th>一般</th>
+<th>FC FICS会員</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>月4回コース</td>
+<td>6,600円／月</td>
+<td>4,400円／月</td>
+</tr>
+
+<tr>
+<td>月8回コース</td>
+<td>8,800円／月</td>
+<td>6,600円／月</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section-dark">
+
+<div class="container">
+
+<div class="card fade" style="text-align:center;">
+
+<div class="badge">
+無料体験受付中
+</div>
+
+<h2 style="
+font-size:clamp(2rem,5vw,4rem);
+margin-bottom:25px;
+line-height:1.2;
+">
+ボールを持つことが、<br>
+もっと楽しくなる。
+</h2>
+
+<p style="
+max-width:700px;
+margin:0 auto 40px;
+line-height:2;
+color:#f5f5f5;
+">
+まずは一度、
+FICSサッカースクールのトレーニングを
+体験してください。
+</p>
+
+<a
+href="https://yatsuhashi-sc.com/16975238155500"
+class="btn btn-primary"
+>
+無料体験申込
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<span class="eyebrow">
+MEMBER LINKS
+</span>
+
+<h2 class="section-title">
+会員向けリンク
+</h2>
+
+<div class="grid-2">
+
+<a href="https://yatsuhashi-sc.com/16975238155500" class="card">
+体験申込
+</a>
+
+<a href="https://yatsuhashi-sc.com/16976940321744" class="card">
+お問い合わせ
+</a>
+
+<a href="https://yatsuhashi-sc.com/15895992800057" class="card">
+各種申請
+</a>
+
+<a href="https://yatsuhashi-sc.com/17704301339093" class="card">
+入会登録・更新
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="fixed-cta">
+<a href="https://yatsuhashi-sc.com/16975238155500">
+無料体験申込
+</a>
+</div>
+
+<script>
+
+document.querySelectorAll('.faq-question').forEach(item=>{
+
+item.addEventListener('click',()=>{
+
+const answer=item.nextElementSibling;
+
+const isOpen=
+answer.style.display==="block";
+
+document
+.querySelectorAll('.faq-answer')
+.forEach(a=>a.style.display='none');
+
+if(!isOpen){
+
+answer.style.display='block';
+
+}
+
+});
+
+});
+
+const observer=new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+},
+
+{
+threshold:.15
+}
+
+);
+
+document
+.querySelectorAll('.fade')
+.forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
+
