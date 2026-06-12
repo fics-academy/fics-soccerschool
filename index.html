@@ -22,42 +22,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-.menu-button{
-position:fixed;
-top:20px;
-right:20px;
-z-index:10000;
-background:#c1121f;
-padding:12px 18px;
-border-radius:999px;
-font-weight:700;
-cursor:pointer;
-}
-
-.mobile-menu{
-position:fixed;
-top:0;
-right:-100%;
-width:280px;
-height:100%;
-background:#111;
-z-index:9999;
-padding:100px 30px;
-transition:.3s;
-display:flex;
-flex-direction:column;
-gap:25px;
-}
-
-.mobile-menu.active{
-right:0;
-}
-
-.mobile-menu a{
-font-size:1.1rem;
-font-weight:700;
-}
-  
 <style>
 
 :root{
@@ -445,42 +409,6 @@ display:block;
 
 <body>
 
-<body>
-
-<div class="menu-button" id="menuBtn">
-☰ MENU
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-
-<a href="https://yatsuhashi-sc.com/16975238155500">
-体験申込
-</a>
-
-<a href="#schedule">
-スケジュール
-</a>
-
-<a href="#price">
-料金・コース
-</a>
-
-<a href="#coach">
-指導スタッフ
-</a>
-
-<a href="#faq">
-FAQ
-</a>
-
-<a href="https://yatsuhashi-sc.com/16976940321744">
-お問い合わせ
-</a>
-
-</div>
-
-<section class="hero">
-
 <section class="hero">
 
 <div class="hero-bg"></div>
@@ -628,7 +556,7 @@ FICSサッカースクールで<br>
 
 </section>
 
-<section id="schedule" class="section-dark">
+<section class="section-dark">
 
 <div class="container">
 
@@ -694,7 +622,7 @@ SCHEDULE
 
 </section>
 
-<section id="price">
+<section>
 
 <div class="container">
 
@@ -798,7 +726,7 @@ FICSサッカースクールでは、<br>
 
 </section>
 
-<section id="coach" class="section-dark">
+<section class="section-dark">
 
 <div class="container">
 
@@ -934,7 +862,7 @@ class="btn btn-primary"
 
 </section>
 
-<section id="faq">
+<section>
 
 <div class="container">
 
@@ -1177,18 +1105,6 @@ threshold:.15
 document
 .querySelectorAll('.fade')
 .forEach(el=>observer.observe(el));
-
-const menuBtn =
-document.getElementById('menuBtn');
-
-const mobileMenu =
-document.getElementById('mobileMenu');
-
-menuBtn.addEventListener('click',()=>{
-
-mobileMenu.classList.toggle('active');
-
-});
 
 </script>
 
